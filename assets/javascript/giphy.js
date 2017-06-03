@@ -17,7 +17,7 @@ let demo = {
 
 };
 
-$(function() {
+$(document).ready(function(){
   demo.init();
 
   // Creates new buttons
