@@ -2,8 +2,8 @@
 let demo = {
   // Properties
   // buttonArr: ["dog", "cat", "rabbit", "hamster", "cow"],
-  buttonArr: ["Broad City", "Parks and Recreation", "Elf", "Bridesmaids", "SNL", "Borat"];
-  
+  buttonArr: ["Broad City", "Parks and Recreation", "Elf", "Bridesmaids", "SNL", "Borat"],
+
   // Methods
   init: function(data){
     for (var i = 0; i < demo.buttonArr.length; i++) {
@@ -55,9 +55,9 @@ $(function() {
           // For each gif in the response
           for (var i = 0; i < response.data.length; i++) {
             // Create div for gif with proper still and animate sources
-            let template = "<div class='large_margin'>" + 
-              "<p>Rating: " + response.data[i].rating.toUpperCase() + "<br/>" + 
-              "<img src='" + response.data[i].images.fixed_height_still.url + "' " + 
+            let template = "<div class='large_margin'>" +
+              "<p>Rating: " + response.data[i].rating.toUpperCase() + "<br/>" +
+              "<img src='" + response.data[i].images.fixed_height_still.url + "' " +
                 "data-still='" + response.data[i].images.fixed_height_still.url + "' " +
                 "data-animate='" + response.data[i].images.fixed_height.url + "' " +
                 "data-state='still' " +
@@ -77,7 +77,7 @@ $(function() {
       $(this).data("state", "animate");
     } else {
       $(this).attr("src", $(this).data("still"));
-      $(this).data("state", "still"); 
+      $(this).data("state", "still");
     }
   });
 });
